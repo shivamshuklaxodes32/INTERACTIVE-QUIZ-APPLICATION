@@ -23,4 +23,6 @@ JavaScript → For quiz logic (questions, timer, scoring, leaderboard, interacti
 
 Basically  I used tools like CHATGPT, CERTAIN WEBSITES , AND YOUTUBE and enjoyed it very much . It gives me confidence of learning this programming languages more conceptually.
 
-THANK YOU.
+##OUTPUT:
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/ed6be4bd-cb10-4759-9853-35510a11b6da" />
