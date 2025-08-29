@@ -1,0 +1,155 @@
+/* ==== General Body with Animated Gradient ==== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #0f2027);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Gradient Animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ==== Stars Background ==== */
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent url("stars.png") repeat top center; /* apne project folder me stars.png rakho */
+  animation: moveStars 200s linear infinite;
+  z-index: 0;
+}
+
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; }
+}
+
+/* ==== Quiz Container ==== */
+.screen {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  width: 420px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 1s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==== Gradient Title (Fixed Clip Issue) ==== */
+.title {
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ff8a00, #e52e71, #9b00e8);
+  -webkit-background-clip: text;   /* Safari/Chrome */
+  background-clip: text;           /* Standard */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff8a00; }
+  to { text-shadow: 0 0 20px #e52e71; }
+}
+
+/* ==== Buttons ==== */
+button {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  margin: 10px 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 90%;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+}
+
+/* ==== Options ==== */
+#options {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.option-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.option-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.02);
+}
+
+/* ==== Timer ==== */
+#timer {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffdd57;
+}
+
+/* ==== Leaderboard ==== */
+#leaderboard {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+#leaderboard h3 {
+  margin-bottom: 10px;
+  color: #00e5ff;
+}
+
+#high-scores {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#high-scores li {
+  padding: 6px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
